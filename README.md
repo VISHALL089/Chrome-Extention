@@ -1,58 +1,34 @@
-ReactJS Productivity Chrome Extension
-A React-based Chrome extension that tracks the time you spend on different websites to help boost productivity.
-If you exceed your configured time limit for a site, the extension will gently remind you by replacing the site’s content with a cute cat image 🐱.
+ReactJS Productivity Chrome Extension — Setup & Guide
 
-✨ Features
-Time Tracking — Tracks time spent on active websites.
+A step-by-step guide to creating and running a React-based Chrome extension that tracks user activity on websites to help improve productivity.
 
-Tab-Aware — Automatically pauses timing when you switch to another tab.
+Installation & Setup
 
-Time Limit Alerts — Shows a cat image when you exceed the set time limit for a site.
+Clone the repository from your version control system.
 
-Configurable Limits — Set how long you want to spend per website.
+Run npm install to install all dependencies.
 
-Gentle Reminders — Replace distracting sites after limit is reached.
+Run npm run build to generate the production build inside the build directory.
 
-📦 Installation & Setup
-Follow these steps to set up the extension locally:
+Open your browser and navigate to chrome://extensions.
 
-Clone the repository
-
-bash
-git clone https://github.com/<your-username>/<your-repo>.git
-cd <your-repo>
-Install dependencies
-
-bash
-npm install
-Build the extension
-
-bash
-npm run build
-This generates the production build in the build directory.
-
-Load the extension in Chrome
-
-Open Google Chrome and go to:
-
-text
-chrome://extensions/
-Enable Developer Mode (top-right toggle).
+Enable Developer mode (toggle in the top right corner).
 
 Click Load unpacked and select the build folder from your project.
 
-Start using the extension
+The extension will now appear in your Chrome extensions list.
 
-Open any website and click the extension icon to see time spent.
+Open any website, then click the extension icon to see time spent on each site.
 
-Switching tabs will pause the timer for the inactive tab.
+Switching tabs automatically pauses the timer for the inactive tab.
 
-If time exceeds your limit, the website is replaced with a cat image reminder.
+If the time spent exceeds your configured limit, the extension replaces the website’s content with a cat image as a gentle reminder.
 
-🛠 Tech Stack
-Frontend: ReactJS
+Suggested Improvements
 
-Chrome APIs: Tabs, Storage, Runtime
+Automatic Daily Reset: Reset tracked time automatically at midnight.
 
-Build Tool: Create React App (CRA) / Webpack (custom for Chrome MV3 compatibility)
+Manual Reset Button: Allow users to reset the timer manually from the popup interface.
+
+Stop Timing After Limit: When the time limit for a domain is exceeded, stop incrementing the timer until the next reset.
 
